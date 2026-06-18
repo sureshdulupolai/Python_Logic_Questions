@@ -1,5 +1,6 @@
 """
-Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
+Write a function, which takes a non-negative integer (seconds) 
+as input and returns the time in a human-readable format (HH:MM:SS)
 
 HH = hours, padded to 2 digits, range: 00 - 99
 MM = minutes, padded to 2 digits, range: 00 - 59
@@ -20,7 +21,8 @@ def make_readable(seconds):
 
 
 """
-The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+The main idea is to count all the occurring characters in a string. 
+If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
 What if the string is empty? Then the result should be empty object literal, {}.
 
 """
@@ -33,7 +35,7 @@ def count(s):
             dct[i] += 1
     return dct
 
-# count('aabbc')
+# print(count('aabbc'))
 
 """
 In this kata you are required to, given a string, replace every letter with its position in the alphabet.
@@ -54,9 +56,13 @@ def alphabet_position(text):
 
 
 """
-You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block for each letter (direction) and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+In Cartesia, each direction (`n`, `s`, `e`, `w`) means walking one block and takes one minute.
+Create a function that returns `true` only if the walk:
 
-Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
+* takes exactly 10 minutes, and
+* brings you back to the starting point.
+
+Otherwise, return `false`.
 
 1 step = 1 minute => 10 step last (jodi)
 """
@@ -77,9 +83,11 @@ def is_valid_walk(walk):
 
 """
 ind the missing letter
-Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+Write a method that takes an array of consecutive (increasing) letters as input and that returns 
+the missing letter in the array.
 
-You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+You will always get an valid array. And it will be always exactly one letter be missing. 
+The length of the array will always be at least 2.
 The array will always contain letters in only one case.
 
 Example:
@@ -99,7 +107,9 @@ def find_missing_letter(chars):
 
 
 """
-Greed is a dice game played with five six-sided dice. Your mission, should you choose to accept it, is to score a throw according to these rules. You will always be given an array with five six-sided dice values.
+Greed is a dice game played with five six-sided dice. Your mission, should you choose to accept it, 
+is to score a throw according to these rules. 
+You will always be given an array with five six-sided dice values.
 
  Three 1's => 1000 points
  Three 6's =>  600 points
@@ -109,7 +119,8 @@ Greed is a dice game played with five six-sided dice. Your mission, should you c
  Three 2's =>  200 points
  One   1   =>  100 points
  One   5   =>   50 point
-Each of 5 dice can only be counted once in each roll. For example, a given "5" can only count as part of a triplet (contributing to the 500 points) or as a single 50 points, but not both in the same roll.
+Each of 5 dice can only be counted once in each roll. For example, a given "5" can only count as part of a triplet 
+(contributing to the 500 points) or as a single 50 points, but not both in the same roll.
 
 Example scoring
 
@@ -152,4 +163,4 @@ def score(dice):
 
     return total
 
-print(score( [5, 1, 3, 4, 1] ))
+# print(score( [5, 1, 3, 4, 1] ))
